@@ -8,12 +8,18 @@
   },
   "author": "Seth Fitzsimmons <seth@mojodna.net>",
   "license": "ISC",
+  "homepage": "https://github.com/mojodna/tilelive-utfgrid",
+  "bugs": "https://github.com/mojodna/tilelive-utfgrid/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mojodna/tilelive-utfgrid.git"
+  },
   "devDependencies": {
     "tilelive": "^4.5.3",
     "mbtiles": "^0.2.9",
     "mocha": "^1.18.0",
     "async": "^0.2.10",
-    "tilelive-cache": "git://github.com/mojodna/tilelive-cache"
+    "tilelive-cache": "mojodna/tilelive-cache"
   },
   "jshintConfig": {
     "node": true,
