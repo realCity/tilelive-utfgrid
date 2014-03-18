@@ -15,10 +15,18 @@ module.exports = function(tilelive, options) {
         return callback(err);
       }
 
+      if (typeof(source.getGrid) !== "function") {
+        return callback(new Error("No getGrid() method for " + uri));
+      }
+
       // proxy source methods
       this.getTile = source.getGrid.bind(source);
-      this.getInfo = source.getInfo.bind(source);
-      this.close = source.close.bind(source);
+
+      ["getInfo", "close"].forEach(function(method) {
+        if (source[method]) {
+          this[method] = source[method].bind(source);
+        }
+      }.bind(this));
 
       return callback(null, this);
     }.bind(this));

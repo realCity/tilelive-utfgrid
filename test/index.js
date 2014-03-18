@@ -1,4 +1,4 @@
-/*global describe, it, before, beforeEach, after, afterEach */
+/*global describe, it, xit, before, beforeEach, after, afterEach */
 "use strict";
 
 var assert = require("assert");
@@ -48,5 +48,26 @@ describe("UTFGrid", function() {
 
       return done();
     });
+  });
+
+  it("should use MBTiles' getInfo()", function(done) {
+    return async.parallel({
+      mbtiles: async.apply(mbtiles.getInfo),
+      grid: async.apply(grid.getInfo)
+    }, function(err, results) {
+      if (err) {
+        return done(err);
+      }
+
+      assert.deepEqual(results.mbtiles, results.grid);
+
+      return done();
+    });
+  });
+
+  xit("should require a getInfo() method");
+
+  xit("should use MBTiles' close()", function() {
+    // create a mock tilelive provider to use as a source
   });
 });
