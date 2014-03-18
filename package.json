@@ -1,0 +1,30 @@
+{
+  "name": "tilelive-utfgrid",
+  "version": "0.0.0",
+  "description": "A tilelive provider that treats grids as tiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Seth Fitzsimmons <seth@mojodna.net>",
+  "license": "ISC",
+  "devDependencies": {
+    "tilelive": "^4.5.3",
+    "mbtiles": "^0.2.9",
+    "mocha": "^1.18.0",
+    "async": "^0.2.10",
+    "tilelive-cache": "git://github.com/mojodna/tilelive-cache"
+  },
+  "jshintConfig": {
+    "node": true,
+    "globalstrict": true,
+    "curly": true,
+    "sub": true,
+    "indent": 2,
+    "newcap": true,
+    "white": false,
+    "undef": true,
+    "unused": true,
+    "maxlen": 100
+  }
+}
