@@ -1,3 +1,6 @@
+[![Build
+Status](https://travis-ci.org/mojodna/tilelive-utfgrid.png)](https://travis-ci.org/mojodna/tilelive-utfgrid)
+
 # tilelive-utfgrid
 
 A [tilelive](https://github.com/mapbox/tilelive.js) provider that allows
