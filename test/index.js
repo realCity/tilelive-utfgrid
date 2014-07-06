@@ -12,7 +12,6 @@ var UTFGrid = require("../")(tilelive);
 MBTiles.registerProtocols(tilelive);
 UTFGrid.registerProtocols(tilelive);
 
-
 describe("UTFGrid", function() {
   var grid,
       mbtiles;

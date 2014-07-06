@@ -34,6 +34,8 @@ module.exports = function(tilelive, options) {
 
   UTFGrid.registerProtocols = function(tilelive) {
     // TODO iterate over previously registered protocols and prepend this?
+    tilelive.protocols[PREFIX + "carto+file:"] = this;
+    tilelive.protocols[PREFIX + "mapnik:"] = this;
     tilelive.protocols[PREFIX + "mbtiles:"] = this;
     tilelive.protocols[PREFIX + "tmstyle:"] = this;
   };
