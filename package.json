@@ -1,6 +1,6 @@
 {
   "name": "tilelive-utfgrid",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A tilelive provider that treats grids as tiles",
   "main": "index.js",
   "scripts": {
