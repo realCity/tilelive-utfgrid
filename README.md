@@ -51,7 +51,7 @@ tilelive.load("utfgrid+mbtiles:///path/to/archive.mbtiles", function(err, source
 You can also use a [Mapbox Studio Classic](https://www.mapbox.com/mapbox-studio-classic/#win64) tilemill 2 (.tm2) project to create a UtfGrid, for example using a regular GeoJSON file as layer. In that case, it is slightly more complex, since you need to register several other protocols, as well as manually edit the created project.yml file to add the interactivity layer as in that case, as explained [here](https://www.mapbox.com/help/style-quickstart/#utfgrid).
 
 Required protocols (```npm i tilelive-vector  tilelive-bridge tilelive-utfgrid tilelive-tmsource tilelive-tmstyle```) and register them as follows:
-```
+```javascript
 require('tilelive-vector'  ).registerProtocols(tilelive);               // to create vector tiles
 require('tilelive-bridge'  ).registerProtocols(tilelive);               // to bridge/connect to a geojson file 
 require('tilelive-utfgrid' )(tilelive).registerProtocols(tilelive);     // to create an UtfGrid source
@@ -59,7 +59,7 @@ require('tilelive-tmsource')(tilelive).registerProtocols(tilelive);     // to op
 require('tilelive-tmstyle' )(tilelive).registerProtocols(tilelive);     // to open a Mapbox Studio Classic tmp2 project
 ```
 And use the following code fragment to load a layer (note that `utfgrid=` is case-sensitive and needs to be added as a prefix).
-```
+```javascript
 tilelive.load("utfgrid+tmstyle:///path/to/project.tm2", function(err, source) { ...
 ```
 In case you not only need to serve a UtfGrid but also raster tiles, take a look at [csWeb-tile](https://github.com/TNOCS/csWeb-tile), which creates two service endpoints simultaneously (host:port//yourprojectname/z/x/y.png and host:port//yourprojectname/z/x/y.grid.json). 
